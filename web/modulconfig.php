@@ -501,7 +501,7 @@ foreach($lines as $line) {
 	}
 	
 	if(strpos($line, "socbt_mac=") !== false) {
-		list(, $socbt_mac_old") = explode("=", $line);
+		list(, $socbt_mac_old) = explode("=", $line);
 	}
 	if(strpos($line, "socbt_cobid=") !== false) {
 		list(, $socbt_cobid_old) = explode("=", $line);
