@@ -1620,6 +1620,7 @@ function display_socmodul() {
 	$('#socmnone').hide();
 	$('#socmhttp').hide();
 	$('#socleaf').hide();
+	$('#socbt').hide();
 	$('#soci3').hide();
 	$('#soczoe').hide();
 	$('#socevnotify').hide();
@@ -1640,6 +1641,9 @@ function display_socmodul() {
 
   	if($('#socmodul').val() == 'soc_leaf')   {
 		$('#socleaf').show();
+	}
+	if($('#socmodul').val() == 'soc_bt')   {
+		$('#socbt').show();
 	}
     if($('#socmodul').val() == 'soc_i3')   {
 		$('#soci3').show();
