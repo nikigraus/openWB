@@ -1553,8 +1553,8 @@ $(function() {
 		SOC_BT Dongle Bluetooth MAC Adresse<br><br>
 	</div>
 	<div class="row bg-info">
-		<b><label for="socmac_cobid">CAN Telegramm ID:</label></b>
-		<input type="password" name="socbt_cobid" id="socbt_cobid" value="<?php echo $soc_cobid_old ?>"><br>
+		<b><label for="socbt_cobid">CAN Telegramm ID:</label></b>
+		<input type="text" name="socbt_cobid" id="socbt_cobid" value="<?php echo $soc_cobid_old ?>"><br>
 	</div>
 	<div class="row bg-info">
 		CAN Bus Telegramm COBID<br><br>
