@@ -499,6 +499,23 @@ foreach($lines as $line) {
 	if(strpos($line, "leafpassworts1=") !== false) {
 		list(, $leafpassworts1old) = explode("=", $line);
 	}
+	
+	if(strpos($line, "socbt_mac=") !== false) {
+		list(, $socbt_mac_old") = explode("=", $line);
+	}
+	if(strpos($line, "socbt_cobid=") !== false) {
+		list(, $socbt_cobid_old) = explode("=", $line);
+	}
+	if(strpos($line, "socbt_byteno=") !== false) {
+		list(, $socbt_byteno_old) = explode("=", $line);
+	}
+	if(strpos($line, "socbt_offset=") !== false) {
+		list(, $socbt_offset_old) = explode("=", $line);
+	}
+	if(strpos($line, "socbt_factor=") !== false) {
+		list(, $socbt_factor_old) = explode("=", $line);
+	}
+	
 	if(strpos($line, "i3passworts1=") !== false) {
 		list(, $i3passworts1old) = explode("=", $line);
 	}
@@ -1366,6 +1383,7 @@ $(function() {
 		<option <?php if($socmodulold == "none\n") echo selected ?> value="none">Nicht vorhanden</option>
 		<option <?php if($socmodulold == "soc_http\n") echo selected ?> value="soc_http">SoC HTTP</option>
 		<option <?php if($socmodulold == "soc_leaf\n") echo selected ?> value="soc_leaf">SoC Nissan Leaf</option>
+		<option <?php if($socmodulold == "soc_bt\n") echo selected ?> value="soc_bt">SoC BT</option>
 		<option <?php if($socmodulold == "soc_i3\n") echo selected ?> value="soc_i3">SoC BMW i3</option>
 		<option <?php if($socmodulold == "soc_zoe\n") echo selected ?> value="soc_zoe">SoC Renault Zoe</option>
 		<option <?php if($socmodulold == "soc_evnotify\n") echo selected ?> value="soc_evnotify">SoC EVNotify</option>
@@ -1525,6 +1543,24 @@ $(function() {
 		Nissan Connect Passwort<br><br>
 	</div>
 </div>
+	
+<div id="socbt">
+	<div class="row bg-info">
+		<b><label for="socbt_mac">Bluetooth MAC:</label></b>
+		<input type="text" name="socbt_mac" id="soc_bt_mac" value="<?php echo $socbt_mac_old ?>"><br>
+	</div>
+	<div class="row bg-info">
+		SOC_BT Dongle Bluetooth MAC Adresse<br><br>
+	</div>
+	<div class="row bg-info">
+		<b><label for="socmac_cobid">CAN Telegramm ID:</label></b>
+		<input type="password" name="socbt_cobid" id="socbt_cobid" value="<?php echo $soc_cobid_old ?>"><br>
+	</div>
+	<div class="row bg-info">
+		CAN Bus Telegramm COBID<br><br>
+	</div>
+</div>
+	
 <div id="soci3">
 	<div class="row bg-info">
 		<b><label for="i3username">Benutzername:</label></b>
