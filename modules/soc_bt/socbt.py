@@ -21,8 +21,9 @@ from bluepy.btle import Scanner, DefaultDelegate
 # ----------------------------------------------------------------------------------------
 
 thestring=str(sys.argv[1] + ' ' + sys.argv[2] + ' ' + sys.argv[3] + ' ' + sys.argv[4] + ' ' + sys.argv[5])
-print("soc_bt: " + thestring)
+print "soc_bt: " + thestring
 
+g_startTime = (int)(time.time())
 g_strMACAddress = sys.argv[1]
 g_strCOBID = "0374"
 g_intVal = 0
@@ -50,7 +51,7 @@ if(g_strMACAddress == "00:00:00:00:00:00"):
     #    print("Device %s (%s), RSSI=%d dB" % (dev.addr, dev.addrType, dev.rssi))
         devName = dev.getValueText(9)
         if devName  == "dani" :
-            print("found dani device with addr: " + dev.addr)
+            print "found dani device with addr: " + dev.addr
             devaddr = dev.addr
     #    for (adtype, desc, value) in dev.getScanData():
     #        print("  %s = %s" % (desc, value))
@@ -66,9 +67,10 @@ if(g_strMACAddress != "00:00:00:00:00:00"):
     #p = Peripheral("5D:44:A6:38:CB:E5", "random")
     #p = Peripheral(g_foundDevice.addr, "random")
     p = Peripheral()
+    devaddr = g_strMACAddress
      
     try:
-        print("try to open " + devaddr)
+        print "try to open " + devaddr
         p = Peripheral(devaddr, "random")
         
         ch = p.getCharacteristics(uuid=temp_uuid)[0]
@@ -81,11 +83,11 @@ if(g_strMACAddress != "00:00:00:00:00:00"):
         if (ch.supportsRead()):
                 try:
                     strval = ch.read()
-                    print "read: " + strval
+                    print("success. read: " + strval)
                     val = binascii.b2a_hex(strval)
                     g_intVal = binascii.unhexlify(val)
                 
-                    chwrite.write(g_cobid)
+                    chwrite.write(g_strCOBID)
     #               val = struct.unpack('f', val)[0]
 #                    print str(val)                    
                     g_exit_code = 1
@@ -96,8 +98,10 @@ if(g_strMACAddress != "00:00:00:00:00:00"):
                     print("Oops!",sys.exc_info()[0],"occured.")
 
     except:
-        print("Oops!",sys.exc_info()[0],"occured.")
+        print "Could not reach BT Module (",sys.exc_info()[0],")"
         p.disconnect()
 
+print "SOC_BT used ", (int)(time.time()) - g_startTime, " seconds"
 sys.exit(g_exit_code)
+
 
