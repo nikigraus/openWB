@@ -1574,7 +1574,7 @@ $(function() {
 		SOC Wert Offset<br><br>
 	</div>
 	<div class="row bg-info">
-		<b><label for="socbt_offset">SOC Wert Skalierung:</label></b>
+		<b><label for="socbt_factor">SOC Wert Skalierung:</label></b>
 		<input type="text" name="socbt_factor" id="socbt_factor" value="<?php echo $socbt_factor_old ?>"><br>
 	</div>
 	<div class="row bg-info">
