@@ -1547,17 +1547,38 @@ $(function() {
 <div id="socbt">
 	<div class="row bg-info">
 		<b><label for="socbt_mac">Bluetooth MAC:</label></b>
-		<input type="text" name="socbt_mac" id="soc_bt_mac" value="<?php echo $socbt_mac_old ?>"><br>
+		<input type="text" name="socbt_mac" id="socbt_mac" value="<?php echo $socbt_mac_old ?>"><br>
 	</div>
 	<div class="row bg-info">
 		SOC_BT Dongle Bluetooth MAC Adresse<br><br>
 	</div>
 	<div class="row bg-info">
 		<b><label for="socbt_cobid">CAN Telegramm ID:</label></b>
-		<input type="text" name="socbt_cobid" id="socbt_cobid" value="<?php echo $soc_cobid_old ?>"><br>
+		<input type="text" name="socbt_cobid" id="socbt_cobid" value="<?php echo $socbt_cobid_old ?>"><br>
 	</div>
 	<div class="row bg-info">
 		CAN Bus Telegramm COBID<br><br>
+	</div>
+	<div class="row bg-info">
+		<b><label for="socbt_byteno">CAN Telegramm Byte Nummer:</label></b>
+		<input type="text" name="socbt_byteno" id="socbt_byteno" value="<?php echo $socbt_byteno_old ?>"><br>
+	</div>
+	<div class="row bg-info">
+		CAN Bus Telegramm Byte Nummer (0-7)<br><br>
+	</div>
+	<div class="row bg-info">
+		<b><label for="socbt_offset">SOC Wert Offset:</label></b>
+		<input type="text" name="socbt_offset" id="socbt_offset" value="<?php echo $socbt_offset_old ?>"><br>
+	</div>
+	<div class="row bg-info">
+		SOC Wert Offset<br><br>
+	</div>
+	<div class="row bg-info">
+		<b><label for="socbt_offset">SOC Wert Skalierung:</label></b>
+		<input type="text" name="socbt_factor" id="socbt_factor" value="<?php echo $socbt_factor_old ?>"><br>
+	</div>
+	<div class="row bg-info">
+		SOC Wert Skalierung<br><br>
 	</div>
 </div>
 	
