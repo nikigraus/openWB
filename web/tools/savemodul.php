@@ -472,6 +472,26 @@ foreach($lines as $line) {
 	    $result .= 'leafpassworts1='.$_POST[leafpassworts1]."\n";
 	$writeit = '1';
     }
+	    if(strpos($line, "socbt_mac=") !== false) {
+	    $result .= 'socbt_mac='.$_POST[socbt_mac]."\n";
+	$writeit = '1';
+    }
+	    if(strpos($line, "socbt_cobid=") !== false) {
+	    $result .= 'socbt_cobid='.$_POST[socbt_cobid]."\n";
+	$writeit = '1';
+    }
+	    if(strpos($line, "socbt_byteno=") !== false) {
+	    $result .= 'socbt_byteno='.$_POST[socbt_byteno]."\n";
+	$writeit = '1';
+    }
+	    if(strpos($line, "socbt_offset=") !== false) {
+	    $result .= 'socbt_offset='.$_POST[socbt_offset]."\n";
+	$writeit = '1';
+    }
+	    if(strpos($line, "socbt_factor=") !== false) {
+	    $result .= 'socbt_factor='.$_POST[socbt_factor]."\n";
+	$writeit = '1';
+    }
 	    if(strpos($line, "i3username=") !== false) {
 	    $result .= 'i3username='.$_POST[i3username]."\n";
 	$writeit = '1';
