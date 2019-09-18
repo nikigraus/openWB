@@ -648,6 +648,26 @@ if ! grep -Fq "leafpassworts1=" /var/www/html/openWB/openwb.conf
 then
 	  echo "leafpassworts1=passwort" >> /var/www/html/openWB/openwb.conf
 fi
+if ! grep -Fq "socbt_mac=" /var/www/html/openWB/openwb.conf
+then
+	  echo "socbt_mac=00:00:00:00:00:00" >> /var/www/html/openWB/openwb.conf
+fi
+if ! grep -Fq "socbt_cobid=" /var/www/html/openWB/openwb.conf
+then
+	  echo "socbt_cobid=0374" >> /var/www/html/openWB/openwb.conf
+fi
+if ! grep -Fq "socbt_byteno=" /var/www/html/openWB/openwb.conf
+then
+	  echo "socbt_byteno=1" >> /var/www/html/openWB/openwb.conf
+fi
+if ! grep -Fq "socbt_offset=" /var/www/html/openWB/openwb.conf
+then
+	  echo "socbt_offset=-10" >> /var/www/html/openWB/openwb.conf
+fi
+if ! grep -Fq "socbt_factor=" /var/www/html/openWB/openwb.conf
+then
+	  echo "socbt_factor=0.5" >> /var/www/html/openWB/openwb.conf
+fi
 if ! grep -Fq "i3username=" /var/www/html/openWB/openwb.conf
 then
 	  echo "i3username=username" >> /var/www/html/openWB/openwb.conf
