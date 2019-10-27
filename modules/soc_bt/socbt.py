@@ -124,3 +124,6 @@ if(g_strMACAddress != "00:00:00:00:00:00"):
 
 print "SOC_BT used ", (int)(time.time()) - g_startTime, " seconds"
 sys.exit(g_exit_code)
+
+
+
